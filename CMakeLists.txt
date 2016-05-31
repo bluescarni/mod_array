@@ -9,11 +9,11 @@ if(TARGET array)
 endif()
 
 add_library(array src/array.cpp)
-add_library(array_interface INTERFACE)
+#add_library(array_interface INTERFACE)
 
-target_include_directories(array_interface INTERFACE
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+# target_include_directories(array_interface INTERFACE
+#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   $<INSTALL_INTERFACE:include>)
 
 target_include_directories(array PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
