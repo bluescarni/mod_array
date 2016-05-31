@@ -4,6 +4,10 @@ enable_testing()
 
 project(array VERSION 0.1 LANGUAGES CXX)
 
+if(TARGET array)
+  return()
+endif()
+
 add_library(array src/array.cpp)
 
 target_include_directories(array PUBLIC
