@@ -1,19 +1,14 @@
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
-enable_testing()
-
-project(array VERSION 0.1 LANGUAGES CXX)
-
 if(TARGET array)
   return()
 endif()
 
-add_library(array src/array.cpp)
-#add_library(array_interface INTERFACE)
+enable_testing()
 
-# target_include_directories(array_interface INTERFACE
-#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#   $<INSTALL_INTERFACE:include>)
+project(array VERSION 0.1 LANGUAGES CXX)
+
+add_library(array src/array.cpp)
 
 target_include_directories(array PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
