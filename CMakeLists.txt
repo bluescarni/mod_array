@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
-if(TARGET array)
-  return()
-endif()
-
 enable_testing()
 
 project(array VERSION 0.1 LANGUAGES CXX)
